@@ -1,0 +1,19 @@
+body {
+  background-color: green;
+
+}
+
+h1 {
+  font-style: italic;
+  color: skyblue;
+}
+
+th {
+  text-align: right;
+  font-weight: bold;
+  font-style: italic;
+  background: maroon;
+  padding: 7px 20px;
+  color: black;
+  border-radius: 7px 7px;
+}
