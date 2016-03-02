@@ -21,7 +21,6 @@ function calculate() {
       result = result.toFixed(1)+" Celsius"
     }
     converted.innerHTML = result;
-    return false;
   }
   else {
     converted.innerHTML = "ERROR! intenta algo como '-4.2C'";
