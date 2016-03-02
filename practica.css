@@ -38,9 +38,7 @@ li a {
     text-decoration: none;
 }
 
-ul a:hover {
-  
+li a:hover {
       background-color: #777;
-  
 }
     
