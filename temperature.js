@@ -2,7 +2,7 @@
 function calculate() {
   var result;
   var temp = original.value;
-  var regexp = /^[?:\s*]?\s*([-+]?\d+(?:\.\d*)?)\s*[e]?\s*([+-]?\d*)\s*([Cc](?:Celsius)?|[Ff](?:a|ar|ahrenheit)?)\b/;
+  var regexp = /\s*([-+]?\d+(?:\.\d*)?)\s*[e]?\s*([+-]?\d*)\s*([Cc](?:elsius)?|[Ff](?:a|ar|ahrenheit)?)\b/;
 
   var m = temp.match(regexp);
 
@@ -10,8 +10,9 @@ function calculate() {
     var num = m[1];
     var ep = m[2];
     var type = m[3];
+    var res = type.toUpperCase();
     num = parseFloat(num);
-    if (type == 'c' || type == 'C') {
+    if (res == 'C' || res ==  'CELSIUS') {
       result = (num * Math.pow(10,ep) * 9/5)+32;
       result = result.toFixed(1)+" Farenheit"
     }
@@ -22,6 +23,7 @@ function calculate() {
     converted.innerHTML = result;
   }
   else {
-    converted.innerHTML = "ERROR! Try something like '-4.2C' instead";
+    converted.innerHTML = "ERROR! intenta algo como '-4.2C'";
   }
+  return false;
 }
