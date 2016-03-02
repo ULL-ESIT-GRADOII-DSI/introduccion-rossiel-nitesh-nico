@@ -1,5 +1,6 @@
 body {
-  background-image: url(temperatura.jpg);
+  background-image: url("temperatura.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
