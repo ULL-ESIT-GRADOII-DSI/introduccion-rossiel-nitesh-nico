@@ -15,10 +15,12 @@ function calculate() {
     if (res == 'C' || res ==  'CELSIUS') {
       result = (num * Math.pow(10,ep) * 9/5)+32;
       result = result.toFixed(1)+" Farenheit"
+      return false;
     }
     else {
       result = (num * Math.pow(10,ep) - 32)*5/9;
       result = result.toFixed(1)+" Celsius"
+          return false;
     }
     converted.innerHTML = result;
     return false;
